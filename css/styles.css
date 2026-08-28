@@ -372,6 +372,17 @@ p + p { margin-top: 1rem; }
 
 @keyframes draw { to { stroke-dashoffset: 0; } }
 
+.hero-est {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(250, 245, 238, 0.7);
+  margin-bottom: 1.3rem;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease) 0.5s forwards;
+}
+
 .hero-title {
   font-size: clamp(2.9rem, 9vw, 6.4rem);
   font-weight: 300;
@@ -1247,7 +1258,7 @@ p + p { margin-top: 1rem; }
   }
   .reveal { opacity: 1; transform: none; }
   .hero-title .line span { transform: none; }
-  .hero-tag span, .hero-ctas, .hero-event, .hero-scroll { opacity: 1; }
+  .hero-est, .hero-tag span, .hero-ctas, .hero-event, .hero-scroll { opacity: 1; }
   .draw { stroke-dashoffset: 0; }
   .bar-fill { transition: none; }
 }
