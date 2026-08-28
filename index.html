@@ -36,7 +36,7 @@
         <span class="brand-word">the<strong>NOM</strong><span class="brand-dot">.</span></span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Primary">
-        <a href="#story">The Market</a>
+        <a href="#market">The Market</a>
         <a href="#halls">The Halls</a>
         <a href="#local">Local food</a>
         <a href="#traders">Traders</a>
@@ -55,39 +55,32 @@
 
     <!-- ======================= HERO ======================= -->
     <section class="hero" id="home">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-vignette" aria-hidden="true"></div>
-      <div class="hero-window" aria-hidden="true">
-        <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
-          <path class="draw d1" pathLength="1" stroke-width="6" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
-          <circle class="draw d2" pathLength="1" stroke-width="5" cx="160" cy="100" r="50"/>
-          <circle class="draw d3" pathLength="1" stroke-width="5" cx="86" cy="81" r="26"/>
-          <circle class="draw d3" pathLength="1" stroke-width="5" cx="234" cy="81" r="26"/>
-          <path class="draw d4" pathLength="1" stroke-width="5" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
-          <path class="draw d5" pathLength="1" stroke-width="5" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
-          <path class="draw d5" pathLength="1" stroke-width="5" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
-        </svg>
-      </div>
-      <div class="hero-content">
-        <p class="hero-est"><span>Est. 1871</span><span>Market Street</span><span>Newton Abbot</span></p>
+      <figure class="hero-photo" aria-hidden="true">
+        <img src="assets/img/hero.jpg" alt="" onerror="this.closest('.hero-photo').remove()">
+      </figure>
+      <div class="hero-copy">
+        <div class="hero-mark" aria-hidden="true">
+          <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
+            <path class="draw d1" pathLength="1" stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
+            <circle class="draw d2" pathLength="1" stroke-width="10" cx="160" cy="100" r="50"/>
+            <circle class="draw d3" pathLength="1" stroke-width="10" cx="86" cy="81" r="26"/>
+            <circle class="draw d3" pathLength="1" stroke-width="10" cx="234" cy="81" r="26"/>
+            <path class="draw d4" pathLength="1" stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
+            <path class="draw d5" pathLength="1" stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
+            <path class="draw d5" pathLength="1" stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
+          </svg>
+        </div>
+        <p class="hero-est">Est. 1871 &middot; Market Street, Newton Abbot</p>
         <h1 class="hero-title">
           <span class="line"><span>Newton</span></span>
           <span class="line"><span><em>Old</em> Market</span></span>
         </h1>
-        <p class="hero-tag">
-          <span>Shop here.</span>
-          <span>Eat here.</span>
-          <span>Grow here.</span>
-        </p>
+        <p class="hero-tag">Shop here. Eat here. <em>Grow here.</em></p>
         <div class="hero-ctas">
           <a class="btn btn-solid" href="#traders">Become a trader</a>
-          <a class="btn-line" href="#story">Read our story <span aria-hidden="true">&darr;</span></a>
+          <a class="btn-line" href="#market">Read our story <span aria-hidden="true">&darr;</span></a>
         </div>
       </div>
-      <a class="hero-scroll" href="#story" aria-label="Scroll to our story">
-        <span class="scroll-word">Scroll</span>
-        <span class="scroll-line" aria-hidden="true"></span>
-      </a>
       <a class="hero-strip" href="#traders">
         <span class="strip-dot" aria-hidden="true"></span>
         Trader Open Day&nbsp;&middot;&nbsp;Thursday 3 September&nbsp;&middot;&nbsp;Book a tour&nbsp;&rarr;
@@ -103,116 +96,101 @@
       </div>
     </div>
 
-    <!-- ======================= STORY ======================= -->
-    <section class="section story" id="story">
-      <div class="container">
-        <header class="sec-head reveal">
-          <span class="sec-label">The old market, reborn</span>
-          <span class="sec-no">&#8470;&thinsp;01</span>
-        </header>
-        <div class="grid-2">
-          <div class="story-text">
-            <h2 class="reveal">A home for genuinely <em>local</em> food and trade.</h2>
+    <!-- ======================= THE MARKET ======================= -->
+    <section class="sec" id="market">
+      <span class="rail" aria-hidden="true">The Market</span>
+      <div class="sec-body">
+        <h2 class="reveal">A home for genuinely <em>local</em> food and trade.</h2>
+        <div class="split">
+          <div class="split-copy">
             <p class="lede reveal">Newton Old Market is being brought back to life: the 1871 market hall in the heart of Newton Abbot, restored as a place where the people who grow it, make it and sell it are at the centre of the story, not the margins.</p>
             <p class="reveal">Market towns like ours have been hollowed out, and the food grown here rarely ends up on tables here. The NOM exists to change both, filling the old hall with South Devon&rsquo;s growers, fishers, bakers, brewers and makers, so that shopping local is the easy, joyful choice again.</p>
-            <div class="story-points">
-              <div class="point reveal">
-                <span class="point-num">No.1</span>
-                <div>
-                  <h3>Real food, from people you can meet</h3>
-                  <p>Stalls run by the folk who grow, catch, bake and make it, so every visit comes with flavour, provenance and a story.</p>
-                </div>
-              </div>
-              <div class="point reveal">
-                <span class="point-num">No.2</span>
-                <div>
-                  <h3>A town centre with a heartbeat</h3>
-                  <p>A reason to come into town again, to shop, eat, gather and linger, while every pound spent stays close to home.</p>
-                </div>
-              </div>
-            </div>
+            <p class="era reveal"><span class="era-num">1871</span>Serving Newton Abbot for over 150 years. Restored in partnership with Teignbridge District Council, for the whole of South Devon.</p>
           </div>
-          <div class="story-media reveal">
-            <figure class="ph ph-tall frame">
-              <img src="assets/img/building.jpg" alt="The Crop team in conversation beneath the arched windows of Newton Old Market" loading="lazy"
-                   onerror="this.closest('.ph').classList.add('ph-empty');this.remove()">
-              <span class="ph-mark" aria-hidden="true">
-                <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
-                  <path stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
-                  <circle stroke-width="10" cx="160" cy="100" r="50"/>
-                  <circle stroke-width="10" cx="86" cy="81" r="26"/>
-                  <circle stroke-width="10" cx="234" cy="81" r="26"/>
-                  <path stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
-                  <path stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
-                  <path stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
-                </svg>
-              </span>
-            </figure>
-            <div class="story-card reveal">
-              <p class="story-card-big">1871</p>
-              <p>Serving Newton Abbot for over 150 years. Restored in partnership with Teignbridge District Council, for the whole of South Devon.</p>
-            </div>
-          </div>
+          <figure class="bleed reveal">
+            <img src="assets/img/building.jpg" alt="The Crop team in conversation beneath the arched windows of Newton Old Market" loading="lazy"
+                 onerror="this.closest('.bleed').classList.add('ph-empty');this.remove()">
+            <span class="ph-mark" aria-hidden="true">
+              <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
+                <path stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
+                <circle stroke-width="10" cx="160" cy="100" r="50"/>
+                <circle stroke-width="10" cx="86" cy="81" r="26"/>
+                <circle stroke-width="10" cx="234" cy="81" r="26"/>
+                <path stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
+                <path stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
+                <path stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
+              </svg>
+            </span>
+            <figcaption>The hall, Market Street</figcaption>
+          </figure>
         </div>
+        <ol class="points-strip">
+          <li class="reveal">
+            <h3>Real food, from people you can meet</h3>
+            <p>Stalls run by the folk who grow, catch, bake and make it, so every visit comes with flavour, provenance and a story.</p>
+          </li>
+          <li class="reveal">
+            <h3>A town centre with a heartbeat</h3>
+            <p>A reason to come into town again, to shop, eat, gather and linger, while every pound spent stays close to home.</p>
+          </li>
+          <li class="reveal">
+            <h3>Under the original iron roof</h3>
+            <p>Brick arches, rooflights and the old timber, restored rather than replaced, and put back to work.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ======================= HALLS ======================= -->
-    <section class="section halls" id="halls">
-      <div class="container">
-        <header class="sec-head reveal">
-          <span class="sec-label">Two halls, one table</span>
-          <span class="sec-no">&#8470;&thinsp;02</span>
-        </header>
+    <!-- ======================= THE HALLS ======================= -->
+    <section class="sec" id="halls">
+      <span class="rail" aria-hidden="true">The Halls</span>
+      <div class="sec-body">
         <h2 class="reveal">Wander in. <em>Stay a while.</em></h2>
 
-        <article class="hall reveal">
-          <a class="hall-figure" href="#traders" tabindex="-1" aria-hidden="true">
-            <figure class="ph arch">
-              <img src="assets/img/market-hall.jpg" alt="The grand staircase inside the restored Market Hall" loading="lazy"
-                   onerror="this.closest('.ph').classList.add('ph-empty');this.remove()">
-              <span class="ph-mark" aria-hidden="true">
-                <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
-                  <path stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
-                  <circle stroke-width="10" cx="160" cy="100" r="50"/>
-                  <circle stroke-width="10" cx="86" cy="81" r="26"/>
-                  <circle stroke-width="10" cx="234" cy="81" r="26"/>
-                  <path stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
-                  <path stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
-                  <path stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
-                </svg>
-              </span>
-            </figure>
-          </a>
-          <div class="hall-body">
-            <span class="hall-tag">Shop here.</span>
-            <h3><a href="#traders">The Market Hall</a></h3>
+        <article class="hall">
+          <div class="hall-copy reveal">
+            <p class="hall-sign">Hall one &middot; <em>Shop here.</em></p>
+            <h3>The Market Hall</h3>
             <p>Fresh produce, fish, meat, bread and makers&rsquo; stalls under the original iron roof: the daily marketplace where South Devon comes to shop.</p>
             <a class="btn-line" href="#traders">Trade in the Market Hall <span aria-hidden="true">&rarr;</span></a>
           </div>
+          <figure class="bleed bleed-wide reveal">
+            <img src="assets/img/market-hall.jpg" alt="The grand staircase inside the restored Market Hall" loading="lazy"
+                 onerror="this.closest('.bleed').classList.add('ph-empty');this.remove()">
+            <span class="ph-mark" aria-hidden="true">
+              <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
+                <path stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
+                <circle stroke-width="10" cx="160" cy="100" r="50"/>
+                <circle stroke-width="10" cx="86" cy="81" r="26"/>
+                <circle stroke-width="10" cx="234" cy="81" r="26"/>
+                <path stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
+                <path stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
+                <path stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
+              </svg>
+            </span>
+            <figcaption>The Market Hall staircase</figcaption>
+          </figure>
         </article>
 
-        <article class="hall hall-flip reveal">
-          <a class="hall-figure" href="#traders" tabindex="-1" aria-hidden="true">
-            <figure class="ph arch">
-              <img src="assets/img/food-hall.jpg" alt="The Food Hall at Newton Old Market" loading="lazy"
-                   onerror="this.closest('.ph').classList.add('ph-empty');this.remove()">
-              <span class="ph-mark" aria-hidden="true">
-                <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
-                  <path stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
-                  <circle stroke-width="10" cx="160" cy="100" r="50"/>
-                  <circle stroke-width="10" cx="86" cy="81" r="26"/>
-                  <circle stroke-width="10" cx="234" cy="81" r="26"/>
-                  <path stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
-                  <path stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
-                  <path stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
-                </svg>
-              </span>
-            </figure>
-          </a>
-          <div class="hall-body">
-            <span class="hall-tag">Eat here.</span>
-            <h3><a href="#traders">The Food Hall</a></h3>
+        <article class="hall hall-second">
+          <figure class="bleed bleed-food reveal ph-arch">
+            <img src="assets/img/food-hall.jpg" alt="The Food Hall at Newton Old Market" loading="lazy"
+                 onerror="this.closest('.bleed').classList.add('ph-empty');this.remove()">
+            <span class="ph-mark" aria-hidden="true">
+              <svg viewBox="0 0 320 384" fill="none" stroke="currentColor">
+                <path stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
+                <circle stroke-width="10" cx="160" cy="100" r="50"/>
+                <circle stroke-width="10" cx="86" cy="81" r="26"/>
+                <circle stroke-width="10" cx="234" cy="81" r="26"/>
+                <path stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
+                <path stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
+                <path stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
+              </svg>
+            </span>
+          </figure>
+          <div class="hall-copy reveal">
+            <p class="hall-sign">Hall two &middot; <em>Eat here.</em></p>
+            <h3>The Food Hall</h3>
             <p>Kitchens and counters cooking with what the market sells: a place to eat well, meet friends and taste exactly where you are.</p>
             <a class="btn-line" href="#traders">Cook in the Food Hall <span aria-hidden="true">&rarr;</span></a>
           </div>
@@ -220,51 +198,43 @@
       </div>
     </section>
 
-    <!-- ======================= THE 50KM MARKET ======================= -->
-    <section class="section local" id="local">
-      <div class="container">
-        <header class="sec-head sec-head-dark reveal">
-          <span class="sec-label">Genuinely local</span>
-          <span class="sec-no">&#8470;&thinsp;03</span>
-        </header>
-        <div class="grid-2">
-          <div>
-            <h2 class="reveal">If it&rsquo;s on our shelves, <em>it grew up nearby.</em></h2>
-            <p class="lede reveal">We&rsquo;re filling the market with food and goods from within 50&nbsp;km of Newton Abbot, from land and sea. That means fresher food, far fewer food miles, and more of every pound staying with the people who actually grew, caught, baked or made what&rsquo;s in your basket.</p>
-            <p class="reveal">Behind the scenes, our LEAFI incentive rewards every trader for sourcing closer to home, so year on year, the local share of what you&rsquo;ll find here keeps climbing.</p>
-            <a class="btn-line reveal" href="#traders">Sell with us <span aria-hidden="true">&rarr;</span></a>
+    <!-- ======================= GENUINELY LOCAL ======================= -->
+    <section class="sec" id="local">
+      <span class="rail" aria-hidden="true">Genuinely local</span>
+      <div class="sec-body">
+        <h2 class="reveal">If it&rsquo;s on our shelves, <em>it grew up nearby.</em></h2>
+        <p class="lede narrow reveal">Fresher food, far fewer food miles, and more of every pound staying with the people who actually grew, caught, baked or made what&rsquo;s in your basket.</p>
+        <div class="stubs">
+          <div class="stub reveal">
+            <p class="stub-num">50&thinsp;km</p>
+            <p>The market is stocked from land and sea within fifty kilometres of Newton Abbot, and it says so on the label.</p>
           </div>
-          <div class="leafi-viz reveal" aria-label="The local share of our shelves, growing over time: 5%, 18%, 41%, 80%">
-            <p class="leafi-viz-title">The local share of our shelves, year on year</p>
-            <div class="bars">
-              <div class="bar" data-val="5"><div class="bar-fill"></div><span class="bar-label"><b>5%</b><i>Day one</i></span></div>
-              <div class="bar" data-val="18"><div class="bar-fill"></div><span class="bar-label"><b>18%</b><i>Growing</i></span></div>
-              <div class="bar" data-val="41"><div class="bar-fill"></div><span class="bar-label"><b>41%</b><i>Thriving</i></span></div>
-              <div class="bar" data-val="80"><div class="bar-fill"></div><span class="bar-label"><b>80%</b><i>The goal</i></span></div>
-            </div>
-            <p class="leafi-viz-note">Everything measured from Newton Abbot, 50&nbsp;km around</p>
+          <div class="stub reveal">
+            <p class="stub-num">LEAFI</p>
+            <p>Our incentive quietly rewards traders for sourcing closer to home: the more local the stall, the less rent it pays.</p>
+          </div>
+          <div class="stub reveal">
+            <p class="stub-num">5&#8239;&rarr;&#8239;80%</p>
+            <p>The local share of what&rsquo;s sold here, climbing year on year until local is simply what we are.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ======================= TRADERS ======================= -->
-    <section class="section traders" id="traders">
-      <div class="container">
-        <header class="sec-head reveal">
-          <span class="sec-label">For traders &amp; makers</span>
-          <span class="sec-no">&#8470;&thinsp;04</span>
-        </header>
-        <div class="grid-2">
-          <div>
-            <h2 class="reveal">Be part of it <em>from the ground up.</em></h2>
-            <p class="lede reveal">We&rsquo;re inviting South Devon&rsquo;s growers, fishers, bakers, brewers, makers and cooks to walk the space with us, talk through what&rsquo;s possible, and help shape the market before the doors open.</p>
+    <section class="sec" id="traders">
+      <span class="rail" aria-hidden="true">Traders &amp; makers</span>
+      <div class="sec-body">
+        <h2 class="reveal">Pitches <em>now open.</em></h2>
+        <div class="split">
+          <div class="split-copy">
+            <p class="lede reveal">Twenty-plus pitches across the Market Hall and Food Hall, and we&rsquo;re inviting South Devon&rsquo;s growers, fishers, bakers, brewers, makers and cooks to walk the space with us and help shape the market before the doors open.</p>
             <p class="reveal">There&rsquo;s no obligation and no hard sell, just a genuine invitation to come and see, and to be part of the conversation early.</p>
-            <ol class="expect-list">
-              <li class="reveal">A walk-through of the Market Hall, Food Hall and the spaces available</li>
+            <ul class="expect-list">
+              <li class="reveal">A walk-through of the Market Hall, Food Hall and the pitches available</li>
               <li class="reveal">An honest conversation about our plans, our timeline and how trader involvement could work</li>
               <li class="reveal">A chance to ask questions, share ideas and tell us what would make this work for you</li>
-            </ol>
+            </ul>
           </div>
           <aside class="ticket reveal">
             <div class="ticket-top">
@@ -296,12 +266,9 @@
     </section>
 
     <!-- ======================= CROP ======================= -->
-    <section class="section crop" id="crop">
-      <div class="container">
-        <header class="sec-head sec-head-crop reveal">
-          <span class="sec-label">The people behind The NOM</span>
-          <span class="sec-no">&#8470;&thinsp;05</span>
-        </header>
+    <section class="sec" id="crop">
+      <span class="rail" aria-hidden="true">The people behind it</span>
+      <div class="sec-body">
         <div class="crop-inner">
           <div class="crop-logo reveal">
             <img src="assets/logos/crop-roundel-colour.png" alt="Crop. Seeds grow here." width="180" height="180">
@@ -317,12 +284,9 @@
     </section>
 
     <!-- ======================= TEAM ======================= -->
-    <section class="section team" id="team">
-      <div class="container">
-        <header class="sec-head reveal">
-          <span class="sec-label">Team Crop</span>
-          <span class="sec-no">&#8470;&thinsp;06</span>
-        </header>
+    <section class="sec" id="team">
+      <span class="rail" aria-hidden="true">Team Crop</span>
+      <div class="sec-body">
         <h2 class="reveal">Farmers, cooks, builders, <em>dreamers.</em></h2>
         <div class="team-grid">
           <article class="team-card reveal">
@@ -370,12 +334,9 @@
     </section>
 
     <!-- ======================= VISIT ======================= -->
-    <section class="section visit" id="visit">
-      <div class="container">
-        <header class="sec-head reveal">
-          <span class="sec-label">Find us</span>
-          <span class="sec-no">&#8470;&thinsp;07</span>
-        </header>
+    <section class="sec" id="visit">
+      <span class="rail" aria-hidden="true">Find us</span>
+      <div class="sec-body">
         <h2 class="reveal">In the heart of <em>Newton Abbot.</em></h2>
         <div class="visit-grid">
           <div class="visit-info reveal">
@@ -410,15 +371,15 @@
 
     <!-- ======================= FOOTER ======================= -->
     <footer class="footer">
-      <div class="container">
+      <div class="sec-body">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="assets/logos/nom-full-white.png" alt="Newton Old Market. Shop here. Eat here. Grow here." width="260">
+            <img src="assets/logos/nom-full-black.png" alt="Newton Old Market. Shop here. Eat here. Grow here." width="260">
           </div>
           <div class="footer-cols">
             <div class="footer-col">
               <h4>Explore</h4>
-              <a href="#story">The Market</a>
+              <a href="#market">The Market</a>
               <a href="#halls">The Halls</a>
               <a href="#local">Local food</a>
               <a href="#team">Team</a>
@@ -440,7 +401,7 @@
         </div>
         <div class="footer-bottom">
           <a class="footer-crop" href="https://cropcommunity.org" target="_blank" rel="noopener">
-            <img src="assets/logos/crop-tag-white.png" alt="Crop. Seeds grow here." width="110">
+            <img src="assets/logos/crop-tag-black.png" alt="Crop. Seeds grow here." width="100">
           </a>
           <p>&copy; <span id="year">2026</span> Crop &middot; Newton Old Market, est. 1871 &middot; Market Street, Newton Abbot, Devon TQ12 2RB<br>
           <span class="footer-links"><a href="https://newtonoldmarket.org">newtonoldmarket.org</a> &middot; <a href="https://thenom.org">thenom.org</a> &middot; <a href="https://cropcommunity.org">cropcommunity.org</a></span></p>
