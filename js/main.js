@@ -1,5 +1,5 @@
 /* Newton Old Market — interactions
-   Reveal on scroll, animated counters, LEAFI bars, nav state, mobile menu. */
+   Reveal on scroll, LEAFI bars, nav state, mobile menu. */
 
 (function () {
   'use strict';
@@ -69,51 +69,6 @@
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('in'); });
-  }
-
-  /* ---------- animated counters ---------- */
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10);
-    var prefix = el.getAttribute('data-prefix') || '';
-    var suffix = el.getAttribute('data-suffix') || '';
-    var duration = 1600;
-    var start = null;
-
-    function fmt(n) {
-      return n.toLocaleString('en-GB');
-    }
-
-    function step(ts) {
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - p, 4);
-      el.innerHTML = prefix + fmt(Math.round(target * eased)) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-
-    if (prefersReduced) {
-      el.innerHTML = prefix + fmt(target) + suffix;
-    } else {
-      requestAnimationFrame(step);
-    }
-  }
-
-  var counters = document.querySelectorAll('.stat-num[data-count]');
-  if ('IntersectionObserver' in window) {
-    var cio = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            cio.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    counters.forEach(function (el) { cio.observe(el); });
-  } else {
-    counters.forEach(animateCount);
   }
 
   /* ---------- LEAFI bars ---------- */
