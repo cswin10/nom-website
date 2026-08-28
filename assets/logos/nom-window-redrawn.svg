@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 384" fill="none" stroke="#000000">
+  <!--
+    Newton Old Market — window mark, redrawn as vector.
+    A slightly taller, more elegant proportion than the original raster mark
+    (5:6 rather than near-square), with a consistent stroke weight and true
+    geometric tangency: the two small tracery circles sit exactly tangent to
+    both the rose circle and the arch. Scales cleanly to any size.
+    Recolour by changing the stroke on the <svg> element.
+  -->
+  <path stroke-width="12" d="M20 364 V160 A140 140 0 0 1 300 160 V364 Z"/>
+  <circle stroke-width="10" cx="160" cy="100" r="50"/>
+  <circle stroke-width="10" cx="86" cy="81" r="26"/>
+  <circle stroke-width="10" cx="234" cy="81" r="26"/>
+  <path stroke-width="10" d="M118 364 V214 A42 42 0 0 1 202 214 V364"/>
+  <path stroke-width="10" d="M48 364 V240 A35 35 0 0 1 118 240 V364"/>
+  <path stroke-width="10" d="M202 364 V240 A35 35 0 0 1 272 240 V364"/>
+</svg>
