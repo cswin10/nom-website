@@ -7,7 +7,8 @@ exists, the site shows a clearly marked "Photograph to follow" slot instead.
 | File | Where it appears | Status |
 | --- | --- | --- |
 | `band.jpg` | Restoration diptych after the story (shown as a true square, uncropped) | ✅ the directors on site |
-| `band-produce.jpg` | Full-width band before the Crop section | ✅ aerial corn harvest (Pexels, Red Zeppelin) |
+| `band-produce.jpg` | Full-width band before the Crop section | ✅ market crates of peppers and tomatoes (Pexels, Annaelle Quionquion) |
+| `goal-produce.jpg` | Beside the 80% goal | ✅ crated tomatoes (Pexels, Paola Graphisme) |
 | `land-rows.jpg` | From-the-land gallery tile 1 (3:4) | ✅ growers in the rows (Pexels, Anna Shvets) |
 | `land-strawberries.jpg` | From-the-land gallery tile 2 (3:4) | ✅ strawberry polytunnel (Pexels, Jonathan Borba) |
 | `land-chickens.jpg` | From-the-land gallery tile 3 (3:4) | ✅ free-range chickens (Pexels, Huseyin Ozen) |
@@ -19,7 +20,7 @@ exists, the site shows a clearly marked "Photograph to follow" slot instead.
 | `restoration.jpg` | Restoration diptych, wide companion image | ✅ hall interior during fit-out (from the deck) |
 | `hero.jpg` | Full-screen hero background (dark overlay is applied for legibility) | ✅ roof-truss group shot |
 | `building.jpg` | "The old market, reborn" section (portrait crop, 3:3.6) | ✅ the restored rose window (from the deck) |
-| `market-hall.jpg` | Market Hall card (arched portrait, 4:4.6) | 🔶 placeholder crop, marked on-site; replace with shoot photography |
+| `market-hall.jpg` | Market Hall card (arched portrait, 4:4.6) | ✅ beetroot and herbs display (Pexels, Engin Akyurt) |
 | `food-hall.jpg` | Food Hall card (arched portrait, 4:4.6) | ✅ street-food shot (from the deck) |
 | `team/andy-johnson.jpg` | Team card (portrait, ~4:4.7) | ✅ |
 | `team/jay-jacoby.jpg` | Team card | ✅ |
