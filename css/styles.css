@@ -1316,7 +1316,7 @@ p + p { margin-top: 1rem; }
 
   /* the photograph sits as a band on top and the copy below it on the dark
      ground, so the founders and the iron roof are never cropped away */
-  .hero-bg { inset: 0 0 auto 0; height: 42svh; }
+  .hero-bg { inset: 0 0 auto 0; height: 36svh; }
 
   .hero-bg::before {
     background-image: url("../assets/img/hero-mobile.jpg");
@@ -1326,16 +1326,21 @@ p + p { margin-top: 1rem; }
 
   .hero-vignette {
     inset: 0 0 auto 0;
-    height: 42svh;
+    height: 36svh;
     background:
       linear-gradient(180deg, rgba(20, 16, 12, 0.5) 0%, transparent 26%, transparent 62%, rgba(20, 16, 12, 0.85) 100%);
   }
 
-  .hero-content { padding: calc(42svh + 1.8rem) 0 2.4rem; }
+  .hero-content { padding: calc(36svh + 1.6rem) 0 2rem; }
 }
 
 @media (max-width: 880px) {
-  .hero-video { inset: 0 0 auto 0; height: 42svh; }
+  .hero-video { inset: 0 0 auto 0; height: 36svh; }
+
+  /* stack on small screens: .hero is a flex row, so a static strip would
+     otherwise become a second column beside the copy */
+  .hero { display: block; }
+  .hero-strip { position: static; }
 
   .hero-ctas {
     margin-top: 2.2rem;
@@ -1393,9 +1398,10 @@ p + p { margin-top: 1rem; }
 .cookie-actions .btn-outline:hover { background: var(--cream); color: var(--ink); box-shadow: none; }
 
 @media (max-width: 640px) {
-  .cookie-inner { padding: 1rem 0; }
-  .cookie-actions { width: 100%; }
-  .cookie-actions .btn { flex: 1; text-align: center; }
+  .cookie-inner { padding: 0.9rem 0; gap: 0.8rem; }
+  .cookie-copy { font-size: 0.82rem; line-height: 1.55; }
+  .cookie-actions { width: 100%; gap: 0.6rem; }
+  .cookie-actions .btn { flex: 1; text-align: center; padding: 0.7rem 1rem; font-size: 0.72rem; }
 }
 
 /* the map only appears once someone asks for it */
