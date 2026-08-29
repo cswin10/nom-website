@@ -129,16 +129,7 @@ p + p { margin-top: 1rem; }
 
 .section { padding: clamp(4.5rem, 9vw, 7.5rem) 0; }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(2.5rem, 6vw, 5.5rem);
-  align-items: start;
-}
 
-@media (max-width: 880px) {
-  .grid-2 { grid-template-columns: 1fr; }
-}
 
 /* ---------- buttons: square, letterpress ---------- */
 
@@ -487,59 +478,25 @@ p + p { margin-top: 1rem; }
   color: var(--stone);
 }
 
-.photo--tall { aspect-ratio: 3 / 3.6; }
-.photo--arch { aspect-ratio: 4 / 4.6; border-radius: 999px 999px 0 0; }
 .photo--team { aspect-ratio: 4 / 5; }
 .photo--arch-top { border-radius: 999px 999px 0 0; }
 .photo--band { height: clamp(320px, 58vh, 600px); }
 .photo--map { aspect-ratio: 8 / 6.2; border: 1px solid var(--line-strong); }
 .photo--wide { aspect-ratio: 16 / 9; }
-.photo--square { aspect-ratio: 1 / 1; }
 .photo--band-tall { height: clamp(440px, 80vh, 820px); }
 
 /* from-the-land gallery */
-.land .land-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1rem, 2.2vw, 1.8rem);
+
+
+
+
 }
 
-@media (max-width: 880px) { .land .land-grid { grid-template-columns: 1fr 1fr; } }
-
-.photo--land { aspect-ratio: 3 / 4; }
-
-.land .land-grid .photo:nth-child(even) { margin-top: 2.4rem; }
-
-@media (max-width: 540px) {
-  .land .land-grid { grid-template-columns: 1fr; }
-  .land .land-grid .photo:nth-child(even) { margin-top: 0; }
-}
-
-.land-caption {
-  margin-top: 1.4rem;
-  font-family: var(--serif);
-  font-size: 0.95rem;
-  color: var(--stone);
-}
 
 /* restoration diptych */
-.resto { padding-top: 0; }
 
-.resto-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(1.6rem, 3.5vw, 3rem);
-  align-items: end;
-}
 
-@media (max-width: 880px) { .resto-grid { grid-template-columns: 1fr; } }
 
-.resto-note {
-  margin-top: 1.6rem;
-  font-size: 0.95rem;
-  color: var(--stone);
-  max-width: 34em;
-}
 
 .traders-grid .photo-wide { margin-top: 2.2rem; }
 
@@ -591,30 +548,10 @@ p + p { margin-top: 1rem; }
 .point h3 { font-size: 1.06rem; margin-bottom: 0.3rem; }
 .point p { font-size: 0.95rem; color: var(--stone); }
 
-.story-media { position: relative; padding-right: 18px; }
 
 /* offset printed frame behind the photo */
-.frame { position: relative; }
 
-.frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--terracotta);
-  transform: translate(16px, 16px);
-  pointer-events: none;
-  z-index: -1;
-}
 
-.story-card {
-  position: relative;
-  margin: -3.2rem 0 0 auto;
-  width: min(320px, 86%);
-  background: var(--char);
-  color: var(--cream);
-  padding: 1.7rem 1.9rem;
-  box-shadow: 8px 8px 0 rgba(172, 75, 29, 0.9);
-}
 
 .story-card-big {
   font-family: var(--serif);
@@ -626,39 +563,20 @@ p + p { margin-top: 1rem; }
   margin-bottom: 0.4rem;
 }
 
-.story-card p:last-child { font-size: 0.87rem; opacity: 0.85; }
 
 /* ---------- halls: alternating, arched ---------- */
 
 .halls { background: var(--sand); }
 
-.hall {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
-  margin-top: clamp(3rem, 6vw, 5rem);
-}
 
-.hall-flip { grid-template-columns: 1.1fr 0.9fr; }
-.hall-flip .hall-figure { order: 2; }
-.hall-flip .hall-body { order: 1; text-align: right; }
-.hall-flip .hall-body h3 a::after { display: none; }
 
-@media (max-width: 760px) {
-  .hall, .hall-flip { grid-template-columns: 1fr; }
-  .hall-flip .hall-figure { order: 0; }
   .hall-flip .hall-body { order: 1; text-align: left; }
 }
 
-.hall-figure { display: block; text-decoration: none; }
 
-.hall .photo { max-width: 440px; }
 
-.hall-flip .photo { margin-left: auto; }
 
 .hall-figure:hover .photo-media img,
-.hall:hover .photo-media img { transform: scale(1.045); }
 
 .hall-tag {
   display: inline-block;
@@ -668,23 +586,9 @@ p + p { margin-top: 1rem; }
   margin-bottom: 0.8rem;
 }
 
-.hall-body h3 {
-  font-family: var(--serif);
-  font-weight: 440;
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin-bottom: 0.9rem;
-}
 
-.hall-body h3 a { text-decoration: none; transition: color 0.3s var(--ease); }
-.hall-body h3 a:hover { color: var(--terracotta); }
 
-.hall-body p {
-  font-size: 1rem;
-  color: var(--stone);
-  max-width: 30em;
-}
 
-.hall-flip .hall-body p { margin-left: auto; }
 
 /* ---------- the 50km market (dark) ---------- */
 
@@ -696,14 +600,7 @@ p + p { margin-top: 1rem; }
 
 .local-statement { max-width: 17em; }
 
-.local-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 34rem) minmax(0, 1fr);
-  gap: clamp(2rem, 4.5vw, 4rem);
-  align-items: center;
-}
 
-@media (max-width: 880px) { .local-grid { grid-template-columns: 1fr; } }
 
 .local .lede { max-width: 42em; }
 
@@ -896,25 +793,9 @@ p + p { margin-top: 1rem; }
 .crop h2 { font-size: clamp(2.4rem, 5vw, 4rem); }
 .crop h2 em { color: var(--cream); }
 
-.crop-inner {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: center;
-}
 
-@media (max-width: 760px) { .crop-inner { grid-template-columns: 1fr; } }
 
-.crop-logo img {
-  width: clamp(130px, 16vw, 190px);
-  height: auto;
-  border-radius: 50%;
-  background: #fff;
-  padding: 10px;
-  transition: transform 0.6s var(--ease);
-}
 
-.crop-logo:hover img { transform: rotate(6deg) scale(1.03); }
 
 .crop .lede, .crop p { color: rgba(255, 251, 246, 0.92); }
 .crop .btn-line { color: #fff; }
@@ -1139,3 +1020,217 @@ p + p { margin-top: 1rem; }
   .hero-est, .hero-tag, .hero-ctas, .hero-strip { opacity: 1; }
   .bar-fill { transition: none; }
 }
+
+
+/* ==========================================================================
+   Full-bleed split-screens: photographs own half the viewport
+   ========================================================================== */
+
+:root { --edge: max(1.5rem, calc((100vw - 1160px) / 2)); }
+
+.duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.duo-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3.5rem, 7vw, 7rem) clamp(2rem, 4.5vw, 4.5rem) clamp(3.5rem, 7vw, 7rem) var(--edge);
+}
+
+.duo-rev .duo-fig { order: -1; }
+.duo-rev .duo-copy { padding-left: clamp(2rem, 4.5vw, 4.5rem); padding-right: var(--edge); }
+
+.duo-fig {
+  position: relative;
+  overflow: hidden;
+  min-height: min(86vh, 880px);
+  margin: 0;
+  background: var(--sand);
+}
+
+.duo-fig > img,
+.duo-fig > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+
+.duo-fig > a { position: absolute; inset: 0; display: block; }
+.duo-fig:hover > img,
+.duo-fig:hover > a > img { transform: scale(1.04); }
+
+/* captions sit on the image, so nothing can clip them */
+.duo-cap {
+  position: absolute;
+  left: clamp(1.1rem, 2vw, 1.8rem);
+  bottom: clamp(1rem, 2vw, 1.5rem);
+  z-index: 2;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: rgba(250, 245, 238, 0.96);
+  text-shadow: 0 1px 14px rgba(20, 16, 12, 0.8);
+}
+
+@media (max-width: 900px) {
+  .duo { grid-template-columns: 1fr; }
+  .duo-rev .duo-fig { order: 0; }
+  .duo-copy,
+  .duo-rev .duo-copy {
+    padding: clamp(2.6rem, 8vw, 4rem) 1.5rem;
+  }
+  .duo-fig { min-height: 58vh; }
+}
+
+/* ---------- story: the 1871 card breaks across the seam ---------- */
+
+.story .duo { position: relative; }
+
+.story-card {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(2rem, 6vw, 4.5rem);
+  transform: translateX(-58%);
+  width: min(340px, 42vw);
+  z-index: 3;
+  background: var(--char);
+  color: var(--cream);
+  padding: 1.7rem 1.9rem;
+  box-shadow: 10px 10px 0 rgba(172, 75, 29, 0.92);
+}
+
+.story-card-big {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 340;
+  font-style: italic;
+  color: var(--terracotta-soft);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.story-card p:last-child { font-size: 0.87rem; opacity: 0.85; }
+
+.duo-cap-right { left: auto; right: clamp(1.1rem, 2vw, 1.8rem); }
+
+@media (max-width: 900px) {
+  .story-card {
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 0 1.5rem;
+  }
+}
+
+/* ---------- restoration ---------- */
+
+.resto .resto-inset { margin-top: 2.2rem; max-width: 34rem; }
+.resto .photo--wide { aspect-ratio: 16 / 9; }
+
+/* ---------- halls ---------- */
+
+.halls { padding: clamp(4rem, 8vw, 7rem) 0 0; }
+
+.halls-head { margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+.halls .duo + .duo { border-top: 1px solid var(--line); }
+
+.halls .duo-fig { min-height: min(74vh, 720px); }
+
+.halls .hall-tag {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--terracotta);
+  margin-bottom: 0.7rem;
+}
+
+.halls .duo-copy h3 {
+  font-family: var(--serif);
+  font-weight: 440;
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+  margin-bottom: 0.9rem;
+}
+
+.halls .duo-copy h3 a { text-decoration: none; transition: color 0.3s var(--ease); }
+.halls .duo-copy h3 a:hover { color: var(--terracotta); }
+.halls .duo-copy p { font-size: 1rem; color: var(--stone); max-width: 30em; }
+.halls .duo-copy .btn-line { align-self: flex-start; }
+
+/* ---------- genuinely local ---------- */
+
+.local { padding-bottom: clamp(5rem, 10vw, 9rem); }
+.local .container { padding-top: clamp(3rem, 6vw, 5rem); }
+
+/* ---------- from the land: edge-to-edge tiles ---------- */
+
+.land { padding: 0 0 clamp(3.5rem, 7vw, 6rem); }
+
+.land-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+@media (max-width: 900px) { .land-grid { grid-template-columns: 1fr 1fr; } }
+
+.land-tile {
+  position: relative;
+  margin: 0;
+  height: clamp(300px, 52vh, 620px);
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.land-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+
+.land-tile:hover img { transform: scale(1.05); }
+
+.land-caption {
+  margin-top: 1.3rem;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--stone);
+}
+
+/* ---------- crop: rust copy against a full-height photograph ---------- */
+
+.crop { background: var(--terracotta); color: var(--cream); }
+
+.crop .lede, .crop p { color: rgba(255, 251, 246, 0.93); }
+.crop .btn-line { color: #fff; align-self: flex-start; }
+.crop .btn-line:hover { color: rgba(255, 255, 255, 0.75); }
+
+.crop-head {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  margin-bottom: 1.4rem;
+}
+
+.crop-mark {
+  width: clamp(66px, 6vw, 86px);
+  height: auto;
+  flex: 0 0 auto;
+  background: var(--cream);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.crop-head h2 { margin-bottom: 0; max-width: none; }
+
+.crop .container { padding-bottom: clamp(3.5rem, 7vw, 6rem); }
+
+.crop .drives { margin-top: clamp(2.6rem, 5vw, 4rem); }
+
+.duo-cap-light { color: rgba(250, 245, 238, 0.96); }
