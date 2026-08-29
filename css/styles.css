@@ -535,6 +535,33 @@ p + p { margin-top: 1rem; }
 .photo--square { aspect-ratio: 1 / 1; }
 .photo--band-tall { height: clamp(440px, 80vh, 820px); }
 
+/* from-the-land gallery */
+.land .land-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2.2vw, 1.8rem);
+}
+
+@media (max-width: 880px) { .land .land-grid { grid-template-columns: 1fr 1fr; } }
+
+.photo--land { aspect-ratio: 3 / 4; }
+
+.land .land-grid .photo:nth-child(even) { margin-top: 2.4rem; }
+
+@media (max-width: 540px) {
+  .land .land-grid { grid-template-columns: 1fr; }
+  .land .land-grid .photo:nth-child(even) { margin-top: 0; }
+}
+
+.land-caption {
+  margin-top: 1.4rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
 /* restoration diptych */
 .resto { padding-top: 0; }
 
@@ -708,6 +735,15 @@ p + p { margin-top: 1rem; }
 
 
 .local-statement { max-width: 17em; }
+
+.local-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 34rem) minmax(0, 1fr);
+  gap: clamp(2rem, 4.5vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 880px) { .local-grid { grid-template-columns: 1fr; } }
 
 .local .lede { max-width: 42em; }
 

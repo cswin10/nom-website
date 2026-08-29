@@ -7,7 +7,13 @@ exists, the site shows a clearly marked "Photograph to follow" slot instead.
 | File | Where it appears | Status |
 | --- | --- | --- |
 | `band.jpg` | Restoration diptych after the story (shown as a true square, uncropped) | ✅ the directors on site |
-| `band-produce.jpg` | Full-width band before the Crop section | ⬜ WANTED: a high-res fresh-produce shot (fruit & veg flatlay or market display), 2400px+ wide, landscape |
+| `band-produce.jpg` | Full-width band before the Crop section | ⬜ Chris's aerial corn-harvest shot |
+| `land-rows.jpg` | From-the-land gallery tile 1 (3:4) | ⬜ Chris's two-growers-in-the-rows shot |
+| `land-strawberries.jpg` | From-the-land gallery tile 2 (3:4) | ⬜ Chris's strawberry-polytunnel shot |
+| `land-chickens.jpg` | From-the-land gallery tile 3 (3:4) | ⬜ Chris's free-range chickens shot |
+| `land-goat.jpg` | From-the-land gallery tile 4 (3:4) | ⬜ Chris's child-and-goat shot |
+| `local-sheep.jpg` | Genuinely local section, beside the intro (16:9) | ⬜ Chris's sheep-by-the-river shot |
+| `band-vista.jpg` | Closing band before the footer | ⬜ Chris's misty Devon patchwork-fields shot |
 | `band-farm.jpg` | Tall full-width band after Genuinely local | ✅ cows grazing the South Devon coast (from the deck) |
 | `gatherings.jpg` | Gatherings & events row in The Halls | ✅ festoon lights at dusk (from the deck) |
 | `restoration.jpg` | Restoration diptych, wide companion image | ✅ hall interior during fit-out (from the deck) |
