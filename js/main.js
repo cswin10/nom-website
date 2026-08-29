@@ -1,5 +1,5 @@
 /* Newton Old Market — interactions
-   Reveal on scroll, local-share meter, nav state, mobile menu. */
+   Reveal on scroll, nav state, mobile menu. */
 
 (function () {
   'use strict';
@@ -69,27 +69,6 @@
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('in'); });
-  }
-
-  /* ---------- local-share meter ---------- */
-  var meter = document.querySelector('.meter');
-  if (meter) {
-    if (prefersReduced || !('IntersectionObserver' in window)) {
-      meter.classList.add('go');
-    } else {
-      var mio = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('go');
-              mio.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-      mio.observe(meter);
-    }
   }
 
   /* ---------- footer year ---------- */
