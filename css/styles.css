@@ -485,13 +485,6 @@ p + p { margin-top: 1rem; }
 .photo--wide { aspect-ratio: 16 / 9; }
 .photo--band-tall { height: clamp(440px, 80vh, 820px); }
 
-/* from-the-land gallery */
-
-
-
-
-}
-
 
 /* restoration diptych */
 
@@ -564,15 +557,9 @@ p + p { margin-top: 1rem; }
 }
 
 
-/* ---------- halls: alternating, arched ---------- */
+/* ---------- halls ---------- */
 
 .halls { background: var(--sand); }
-
-
-
-  .hall-flip .hall-body { order: 1; text-align: left; }
-}
-
 
 
 
@@ -1234,3 +1221,28 @@ p + p { margin-top: 1rem; }
 .crop .drives { margin-top: clamp(2.6rem, 5vw, 4rem); }
 
 .duo-cap-light { color: rgba(250, 245, 238, 0.96); }
+
+/* ---------- mobile hero: photograph band above the name ---------- */
+
+@media (max-width: 880px) {
+  .hero { min-height: 0; }
+
+  /* the photograph sits as a band on top and the copy below it on the dark
+     ground, so the founders and the iron roof are never cropped away */
+  .hero-bg { inset: 0 0 auto 0; height: 56svh; }
+
+  .hero-bg::before {
+    background-image: url("../assets/img/hero-mobile.jpg");
+    background-position: center 22%;
+    opacity: 0.95;
+  }
+
+  .hero-vignette {
+    inset: 0 0 auto 0;
+    height: 56svh;
+    background:
+      linear-gradient(180deg, rgba(20, 16, 12, 0.5) 0%, transparent 26%, transparent 62%, rgba(20, 16, 12, 0.85) 100%);
+  }
+
+  .hero-content { padding: calc(56svh + 2.2rem) 0 3rem; }
+}
