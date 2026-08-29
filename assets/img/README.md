@@ -6,7 +6,8 @@ exists, the site shows a clearly marked "Photograph to follow" slot instead.
 
 | File | Where it appears | Status |
 | --- | --- | --- |
-| `band.jpg` | Full-width photography band between the story and the halls (edge to edge, ~16:6) | ⬜ reserved for real photography: the building, ironwork, or producers on their land |
+| `band.jpg` | Full-width band between the story and the halls | ⬜ the construction/restoration shot (two founders in hi-vis over the hall) would be perfect here |
+| `band-produce.jpg` | Full-width band before the Crop section | ⬜ fresh produce shot, e.g. the dark fruit-and-veg image from cropcommunity.org |
 | `hero.jpg` | Full-screen hero background (dark overlay is applied for legibility) | ✅ roof-truss group shot |
 | `building.jpg` | "The old market, reborn" section (portrait crop, 3:3.6) | ✅ brick arch + lamp (no people) |
 | `market-hall.jpg` | Market Hall card (arched portrait, 4:4.6) | 🔶 placeholder crop, marked on-site; replace with shoot photography |
@@ -23,6 +24,11 @@ Every image uses the shared photo component (`figure.photo > .photo-media > img`
 These were generated (resized + compressed) from the high-res originals in the
 repo root. Replace any of them the same way — same filename, and the site picks
 it up.
+
+Images from cropcommunity.org (the founders' first site) are welcome here per Jay,
+but they need to be added to the repo as files — this environment can't fetch
+that domain. Good candidates: the dark produce flatlay, the regenerative-farming
+shots, and the gathering-circle photo (that one could also refresh a hall card).
 
 Tips:
 

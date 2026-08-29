@@ -889,6 +889,37 @@ p + p { margin-top: 1rem; }
 .crop .btn-line { color: #fff; }
 .crop .btn-line:hover { color: rgba(255, 255, 255, 0.75); }
 
+.crop-tercet {
+  font-family: var(--serif);
+  font-weight: 360;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.45;
+  margin-bottom: 1.4rem;
+}
+
+.drives {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.6rem, 4vw, 3.5rem);
+  border-top: 1px solid rgba(250, 245, 238, 0.35);
+  margin-top: clamp(2.6rem, 5vw, 4rem);
+  padding-top: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+@media (max-width: 880px) { .drives { grid-template-columns: 1fr; } }
+
+.drive h3 {
+  font-family: var(--serif);
+  font-weight: 460;
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.drive p {
+  font-size: 0.93rem;
+  color: rgba(255, 251, 246, 0.88);
+}
+
 /* ---------- team: arched portraits ---------- */
 
 .team { background: var(--cream); }
