@@ -2,7 +2,8 @@
 
 The website for **The NOM** (Newton Old Market), Market Street, Newton Abbot,
 Devon — a historic market hall brought back to life by
-[Crop](https://cropcommunity.org) as a home for genuinely local food and trade.
+Crop as a home for genuinely local food and trade. This site replaces the old
+cropcommunity.org and will be served from all three of their domains.
 
 > Shop here. Eat here. Grow here.
 
