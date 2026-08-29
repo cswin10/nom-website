@@ -532,6 +532,54 @@ p + p { margin-top: 1rem; }
 .photo--band { height: clamp(320px, 58vh, 600px); }
 .photo--map { aspect-ratio: 8 / 6.2; border: 1px solid var(--line-strong); }
 .photo--wide { aspect-ratio: 16 / 9; }
+.photo--square { aspect-ratio: 1 / 1; }
+.photo--band-tall { height: clamp(440px, 80vh, 820px); }
+
+/* from-the-land gallery */
+.land .land-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2.2vw, 1.8rem);
+}
+
+@media (max-width: 880px) { .land .land-grid { grid-template-columns: 1fr 1fr; } }
+
+.photo--land { aspect-ratio: 3 / 4; }
+
+.land .land-grid .photo:nth-child(even) { margin-top: 2.4rem; }
+
+@media (max-width: 540px) {
+  .land .land-grid { grid-template-columns: 1fr; }
+  .land .land-grid .photo:nth-child(even) { margin-top: 0; }
+}
+
+.land-caption {
+  margin-top: 1.4rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+/* restoration diptych */
+.resto { padding-top: 0; }
+
+.resto-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(1.6rem, 3.5vw, 3rem);
+  align-items: end;
+}
+
+@media (max-width: 880px) { .resto-grid { grid-template-columns: 1fr; } }
+
+.resto-note {
+  margin-top: 1.6rem;
+  font-size: 0.95rem;
+  color: var(--stone);
+  max-width: 34em;
+}
 
 .traders-grid .photo-wide { margin-top: 2.2rem; }
 
@@ -687,6 +735,15 @@ p + p { margin-top: 1rem; }
 
 
 .local-statement { max-width: 17em; }
+
+.local-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 34rem) minmax(0, 1fr);
+  gap: clamp(2rem, 4.5vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 880px) { .local-grid { grid-template-columns: 1fr; } }
 
 .local .lede { max-width: 42em; }
 
