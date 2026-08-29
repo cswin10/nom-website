@@ -1,5 +1,5 @@
 /* Newton Old Market — interactions
-   Reveal on scroll, LEAFI bars, nav state, mobile menu. */
+   Reveal on scroll, local-share meter, nav state, mobile menu. */
 
 (function () {
   'use strict';
@@ -71,33 +71,24 @@
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---------- LEAFI bars ---------- */
-  var viz = document.querySelector('.leafi-viz');
-  if (viz) {
-    function fillBars() {
-      viz.querySelectorAll('.bar').forEach(function (bar, i) {
-        var val = parseInt(bar.getAttribute('data-val'), 10);
-        var fill = bar.querySelector('.bar-fill');
-        setTimeout(function () {
-          fill.style.height = val + '%';
-        }, prefersReduced ? 0 : i * 180);
-      });
-    }
-    if ('IntersectionObserver' in window) {
-      var bio = new IntersectionObserver(
+  /* ---------- local-share meter ---------- */
+  var meter = document.querySelector('.meter');
+  if (meter) {
+    if (prefersReduced || !('IntersectionObserver' in window)) {
+      meter.classList.add('go');
+    } else {
+      var mio = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              fillBars();
-              bio.unobserve(entry.target);
+              entry.target.classList.add('go');
+              mio.unobserve(entry.target);
             }
           });
         },
-        { threshold: 0.35 }
+        { threshold: 0.5 }
       );
-      bio.observe(viz);
-    } else {
-      fillBars();
+      mio.observe(meter);
     }
   }
 
