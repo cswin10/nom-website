@@ -71,6 +71,18 @@
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
 
+  /* ---------- hero video: only shown once it can actually play ---------- */
+  var heroVideo = document.getElementById('heroVideo');
+  if (heroVideo && !prefersReduced && window.matchMedia('(min-width: 881px)').matches) {
+    heroVideo.preload = 'auto';
+    heroVideo.addEventListener('canplay', function () {
+      heroVideo.classList.add('ready');
+      var playing = heroVideo.play();
+      if (playing && playing.catch) playing.catch(function () {});
+    });
+    heroVideo.load();
+  }
+
   /* ---------- footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
