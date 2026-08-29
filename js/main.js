@@ -114,16 +114,25 @@
     mapBox.appendChild(frame);
   }
 
+  // while the bar is up, keep its height clear so it never sits on content
+  function padForBar() {
+    if (!bar || bar.hidden) { document.body.style.paddingBottom = ''; return; }
+    document.body.style.paddingBottom = bar.offsetHeight + 'px';
+  }
+
   var choice = readChoice();
   if (choice === 'accepted') {
     loadMap();
   } else if (!choice && bar) {
     bar.hidden = false;
+    padForBar();
+    window.addEventListener('resize', padForBar);
   }
 
   function settle(value) {
     writeChoice(value);
     if (bar) bar.hidden = true;
+    document.body.style.paddingBottom = '';
     if (value === 'accepted') loadMap();
   }
 
