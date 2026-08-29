@@ -7,13 +7,13 @@ exists, the site shows a clearly marked "Photograph to follow" slot instead.
 | File | Where it appears | Status |
 | --- | --- | --- |
 | `band.jpg` | Restoration diptych after the story (shown as a true square, uncropped) | ✅ the directors on site |
-| `band-produce.jpg` | Full-width band before the Crop section | ⬜ Chris's aerial corn-harvest shot |
-| `land-rows.jpg` | From-the-land gallery tile 1 (3:4) | ⬜ Chris's two-growers-in-the-rows shot |
-| `land-strawberries.jpg` | From-the-land gallery tile 2 (3:4) | ⬜ Chris's strawberry-polytunnel shot |
-| `land-chickens.jpg` | From-the-land gallery tile 3 (3:4) | ⬜ Chris's free-range chickens shot |
-| `land-goat.jpg` | From-the-land gallery tile 4 (3:4) | ⬜ Chris's child-and-goat shot |
-| `local-sheep.jpg` | Genuinely local section, beside the intro (16:9) | ⬜ Chris's sheep-by-the-river shot |
-| `band-vista.jpg` | Closing band before the footer | ⬜ Chris's misty Devon patchwork-fields shot |
+| `band-produce.jpg` | Full-width band before the Crop section | ✅ aerial corn harvest (Pexels, Red Zeppelin) |
+| `land-rows.jpg` | From-the-land gallery tile 1 (3:4) | ✅ growers in the rows (Pexels, Anna Shvets) |
+| `land-strawberries.jpg` | From-the-land gallery tile 2 (3:4) | ✅ strawberry polytunnel (Pexels, Jonathan Borba) |
+| `land-chickens.jpg` | From-the-land gallery tile 3 (3:4) | ✅ free-range chickens (Pexels, Huseyin Ozen) |
+| `land-goat.jpg` | From-the-land gallery tile 4 (3:4) | ✅ child and goat (Pexels, Anastasia Shuraeva) |
+| `local-sheep.jpg` | Genuinely local section, beside the intro (16:9) | ✅ riverside sheep (Pexels, Harry Cooke) |
+| `band-vista.jpg` | Closing band before the footer | ✅ misty patchwork fields (Pexels, Lif 4GD) |
 | `band-farm.jpg` | Tall full-width band after Genuinely local | ✅ cows grazing the South Devon coast (from the deck) |
 | `gatherings.jpg` | Gatherings & events row in The Halls | ✅ festoon lights at dusk (from the deck) |
 | `restoration.jpg` | Restoration diptych, wide companion image | ✅ hall interior during fit-out (from the deck) |
@@ -40,3 +40,7 @@ Tips:
   (export at quality 70–80). The hero can be up to ~3000px wide.
 - Portraits work best with a little headroom — the crops centre on the
   middle of the frame.
+
+Stock photography is from Pexels (free for commercial use, no attribution
+required; photographers credited above out of courtesy). Originals live in
+the repo root.
