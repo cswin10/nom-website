@@ -748,10 +748,19 @@ p + p { margin-top: 1rem; }
 .local .lede { max-width: 42em; }
 
 .goal {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1.1fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: center;
   border-top: 1px solid var(--line);
   padding-top: clamp(2rem, 4vw, 3rem);
   margin-top: clamp(2.6rem, 5vw, 4rem);
 }
+
+@media (max-width: 1020px) { .goal { grid-template-columns: auto minmax(0, 1fr); } .goal-photo { display: none; } }
+@media (max-width: 760px) { .goal { grid-template-columns: 1fr; gap: 1.8rem; } }
+
+.photo--goal { aspect-ratio: 4 / 5; }
 
 .goal-num {
   font-family: var(--serif);
@@ -763,21 +772,36 @@ p + p { margin-top: 1rem; }
   margin-left: -0.04em;
 }
 
-.goal-copy {
-  margin-top: clamp(1.6rem, 3vw, 2.4rem);
-  max-width: 30em;
-}
+.goal-copy { max-width: 44em; }
 
 .goal-label {
   font-weight: 500;
-  font-size: 1.05rem;
-  margin-bottom: 0.6rem;
+  font-size: 1.12rem;
+  margin-bottom: 1.1rem;
 }
 
-.goal-copy p:last-child {
-  font-size: 0.95rem;
+.goal-facts { list-style: none; }
+
+.goal-facts li {
+  position: relative;
+  padding: 0.85rem 0 0.85rem 1.7rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.97rem;
   color: var(--stone);
 }
+
+.goal-facts li:last-child { border-bottom: 1px solid var(--line); }
+
+.goal-facts li::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 1.5rem;
+  width: 7px; height: 7px;
+  background: var(--terracotta);
+}
+
+.goal-copy .btn-line { margin-top: 1.5rem; }
 
 /* ---------- traders + ticket ---------- */
 
