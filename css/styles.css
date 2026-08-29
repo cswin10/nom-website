@@ -71,12 +71,6 @@ h2 {
   max-width: 20em;
 }
 
-h2 em {
-  font-style: normal;
-  font-weight: 400;
-  color: var(--terracotta);
-}
-
 h2 .thin { font-weight: 300; opacity: 0.62; }
 
 h3 { font-weight: 500; letter-spacing: -0.005em; }
@@ -104,17 +98,8 @@ p + p { margin-top: 1rem; }
   text-transform: uppercase;
 }
 
-.sec-label::before {
-  content: "";
-  display: inline-block;
-  width: 8px; height: 8px;
-  background: var(--terracotta);
-  margin-right: 0.9rem;
-}
-
 .sec-head-dark { border-top-color: rgba(250, 245, 238, 0.4); }
 .sec-head-crop { border-top-color: rgba(250, 245, 238, 0.55); }
-.sec-head-crop .sec-label::before { background: var(--cream); }
 
 /* underlined text action */
 .btn-line {
@@ -375,29 +360,14 @@ p + p { margin-top: 1rem; }
 }
 
 .hero-est {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  flex-wrap: wrap;
-  font-size: 0.74rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: rgba(250, 245, 238, 0.85);
+  font-size: 0.86rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: rgba(250, 245, 238, 0.88);
   text-shadow: 0 1px 10px rgba(20, 16, 12, 0.7);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.2rem;
   opacity: 0;
   animation: fadeUp 0.9s var(--ease) 0.4s forwards;
-}
-
-.hero-est span + span::before {
-  content: "";
-  display: inline-block;
-  width: 2rem;
-  height: 1px;
-  background: rgba(250, 245, 238, 0.45);
-  margin-right: 1.1rem;
-  vertical-align: middle;
 }
 
 .hero-title {
@@ -412,7 +382,6 @@ p + p { margin-top: 1rem; }
 .hero-title em {
   font-style: italic;
   font-weight: 340;
-  color: var(--terracotta-soft);
 }
 
 .hero-title .line { display: block; overflow: hidden; }
@@ -485,14 +454,7 @@ p + p { margin-top: 1rem; }
 
 .hero-strip:hover { background: var(--terracotta); color: #fff; }
 
-.strip-dot {
-  width: 7px; height: 7px;
-  background: var(--terracotta-soft);
-  flex: 0 0 auto;
-  transition: background 0.3s;
-}
 
-.hero-strip:hover .strip-dot { background: #fff; }
 
 /* ---------- photography component ----------
    <figure class="photo"><div class="photo-media photo--*"><img></div>
@@ -518,10 +480,10 @@ p + p { margin-top: 1rem; }
 
 .photo > figcaption {
   margin-top: 0.7rem;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: var(--stone);
 }
 
@@ -555,10 +517,8 @@ p + p { margin-top: 1rem; }
 
 .land-caption {
   margin-top: 1.4rem;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  font-family: var(--serif);
+  font-size: 0.95rem;
   color: var(--stone);
 }
 
@@ -783,23 +743,13 @@ p + p { margin-top: 1rem; }
 .goal-facts { list-style: none; }
 
 .goal-facts li {
-  position: relative;
-  padding: 0.85rem 0 0.85rem 1.7rem;
+  padding: 0.85rem 0;
   border-top: 1px solid var(--line);
   font-size: 0.97rem;
   color: var(--stone);
 }
 
 .goal-facts li:last-child { border-bottom: 1px solid var(--line); }
-
-.goal-facts li::before {
-  content: "";
-  position: absolute;
-  left: 0.1rem;
-  top: 1.5rem;
-  width: 7px; height: 7px;
-  background: var(--terracotta);
-}
 
 .goal-copy .btn-line { margin-top: 1.5rem; }
 
