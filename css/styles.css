@@ -279,6 +279,11 @@ p + p { margin-top: 1rem; }
   transition: transform 0.3s var(--ease), opacity 0.3s;
 }
 
+.nav-burger { position: relative; z-index: 2; }
+
+/* the open panel is dark, so force the X light no matter the nav state */
+.nav-burger.open span { background: var(--cream); }
+
 .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-burger.open span:nth-child(2) { opacity: 0; }
 .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -395,7 +400,7 @@ p + p { margin-top: 1rem; }
 }
 
 @media (max-width: 880px) {
-  .hero-lockup { --lockup-w: min(430px, 88vw); }
+  .hero-lockup { --lockup-w: min(380px, 82vw); }
 }
 
 .hero-title {
@@ -447,7 +452,7 @@ p + p { margin-top: 1rem; }
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.6rem;
+  gap: 1.2rem 1.6rem;
   opacity: 0;
   animation: fadeUp 0.9s var(--ease) 1.8s forwards;
 }
@@ -1308,7 +1313,7 @@ p + p { margin-top: 1rem; }
 
   /* the photograph sits as a band on top and the copy below it on the dark
      ground, so the founders and the iron roof are never cropped away */
-  .hero-bg { inset: 0 0 auto 0; height: 56svh; }
+  .hero-bg { inset: 0 0 auto 0; height: 42svh; }
 
   .hero-bg::before {
     background-image: url("../assets/img/hero-mobile.jpg");
@@ -1318,19 +1323,148 @@ p + p { margin-top: 1rem; }
 
   .hero-vignette {
     inset: 0 0 auto 0;
-    height: 56svh;
+    height: 42svh;
     background:
       linear-gradient(180deg, rgba(20, 16, 12, 0.5) 0%, transparent 26%, transparent 62%, rgba(20, 16, 12, 0.85) 100%);
   }
 
-  .hero-content { padding: calc(56svh + 2.2rem) 0 3rem; }
+  .hero-content { padding: calc(42svh + 1.8rem) 0 2.4rem; }
 }
 
 @media (max-width: 880px) {
-  .hero-video { display: none; }
+  .hero-video { inset: 0 0 auto 0; height: 42svh; }
+
+  .hero-ctas {
+    margin-top: 2.2rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero .btn-line { margin-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
   .hero-lockup img { transform: none; }
 }
+
+/* ==========================================================================
+   Cookie banner, gated map and the legal pages
+   ========================================================================== */
+
+.cookie-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 300;
+  background: var(--char);
+  color: var(--cream);
+  border-top: 3px solid var(--terracotta);
+}
+
+.cookie-bar[hidden] { display: none; }
+
+.cookie-inner {
+  width: min(1160px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  flex-wrap: wrap;
+}
+
+.cookie-copy {
+  font-size: 0.92rem;
+  color: rgba(250, 245, 238, 0.85);
+  max-width: 62ch;
+}
+
+.cookie-copy a { color: var(--terracotta-soft); }
+
+.cookie-actions { display: flex; gap: 0.8rem; flex-shrink: 0; }
+
+.cookie-actions .btn { padding: 0.8rem 1.6rem; }
+
+.cookie-actions .btn-outline { border-color: rgba(250, 245, 238, 0.55); color: var(--cream); }
+.cookie-actions .btn-outline:hover { background: var(--cream); color: var(--ink); box-shadow: none; }
+
+@media (max-width: 640px) {
+  .cookie-inner { padding: 1rem 0; }
+  .cookie-actions { width: 100%; }
+  .cookie-actions .btn { flex: 1; text-align: center; }
+}
+
+/* the map only appears once someone asks for it */
+.map-consent {
+  height: 100%;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--sand);
+}
+
+.map-consent-copy { font-size: 0.96rem; color: var(--stone); max-width: 34em; }
+
+.map-alt { font-size: 0.86rem; }
+.map-alt a { color: var(--terracotta); }
+
+/* ---------- legal pages ---------- */
+
+.legal { padding: clamp(7rem, 12vw, 10rem) 0 clamp(4rem, 8vw, 7rem); }
+
+.legal-inner { max-width: 44rem; }
+
+.legal-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.legal h1 {
+  font-family: var(--serif);
+  font-weight: 420;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.legal-updated { font-size: 0.86rem; color: var(--stone); margin-bottom: 2.4rem; }
+
+.legal h2 {
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  margin: 2.6rem 0 0.9rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  max-width: none;
+}
+
+.legal p, .legal li { font-size: 1rem; }
+.legal .lede { font-size: 1.14rem; }
+.legal a { color: var(--terracotta); }
+
+.legal ul { margin: 1rem 0 0 1.1rem; }
+.legal li { margin-bottom: 0.6rem; }
+
+.legal-note {
+  border-left: 3px solid var(--terracotta);
+  padding: 0.7rem 0 0.7rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--stone);
+  background: var(--sand);
+}
+
+.legal-table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; font-size: 0.94rem; }
+.legal-table th, .legal-table td { text-align: left; padding: 0.85rem 0.8rem 0.85rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.legal-table th { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); }
+.legal-table code { font-size: 0.88em; background: var(--sand); padding: 0.1rem 0.35rem; }
+
+.legal-page .footer { border-top: 2px solid var(--line-strong); }

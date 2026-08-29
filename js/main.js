@@ -73,7 +73,13 @@
 
   /* ---------- hero video: only shown once it can actually play ---------- */
   var heroVideo = document.getElementById('heroVideo');
-  if (heroVideo && !prefersReduced && window.matchMedia('(min-width: 881px)').matches) {
+  if (heroVideo && !prefersReduced) {
+    // phones get the lighter encode so the hero is not 5MB on mobile data
+    if (window.matchMedia('(max-width: 880px)').matches) {
+      Array.prototype.forEach.call(heroVideo.querySelectorAll('source'), function (src) {
+        if (src.dataset.mobile) src.src = src.dataset.mobile;
+      });
+    }
     heroVideo.preload = 'auto';
     heroVideo.addEventListener('canplay', function () {
       heroVideo.classList.add('ready');
@@ -81,6 +87,62 @@
       if (playing && playing.catch) playing.catch(function () {});
     });
     heroVideo.load();
+  }
+
+  /* ---------- cookie consent + the map it gates ---------- */
+  var KEY = 'nom-cookie-choice';
+  var bar = document.getElementById('cookieBar');
+  var mapBox = document.getElementById('visitMap');
+
+  function readChoice() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+
+  function writeChoice(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  }
+
+  function loadMap() {
+    if (!mapBox || mapBox.querySelector('iframe')) return;
+    var frame = document.createElement('iframe');
+    frame.src = mapBox.getAttribute('data-map-src');
+    frame.title = 'Map of Newton Old Market, Market Street, Newton Abbot';
+    frame.loading = 'lazy';
+    frame.referrerPolicy = 'no-referrer-when-downgrade';
+    frame.setAttribute('allowfullscreen', '');
+    mapBox.innerHTML = '';
+    mapBox.appendChild(frame);
+  }
+
+  var choice = readChoice();
+  if (choice === 'accepted') {
+    loadMap();
+  } else if (!choice && bar) {
+    bar.hidden = false;
+  }
+
+  function settle(value) {
+    writeChoice(value);
+    if (bar) bar.hidden = true;
+    if (value === 'accepted') loadMap();
+  }
+
+  var accept = document.getElementById('cookieAccept');
+  var decline = document.getElementById('cookieDecline');
+  if (accept) accept.addEventListener('click', function () { settle('accepted'); });
+  if (decline) decline.addEventListener('click', function () { settle('declined'); });
+
+  // loading the map by hand is itself consent for the map
+  var loadBtn = document.getElementById('loadMap');
+  if (loadBtn) loadBtn.addEventListener('click', function () { settle('accepted'); });
+
+  var reset = document.getElementById('resetCookieChoice');
+  if (reset) {
+    reset.addEventListener('click', function () {
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      reset.textContent = 'Choice cleared, the banner will return';
+      reset.disabled = true;
+    });
   }
 
   /* ---------- footer year ---------- */
