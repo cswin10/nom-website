@@ -135,6 +135,9 @@ p + p { margin-top: 1rem; }
 
 .btn {
   display: inline-block;
+  /* <button> defaults to the UA grey ButtonFace, which killed the
+     contrast on the outline variants; make the base transparent */
+  background: transparent;
   font-family: var(--font);
   font-size: 0.78rem;
   font-weight: 600;
