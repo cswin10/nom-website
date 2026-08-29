@@ -532,6 +532,27 @@ p + p { margin-top: 1rem; }
 .photo--band { height: clamp(320px, 58vh, 600px); }
 .photo--map { aspect-ratio: 8 / 6.2; border: 1px solid var(--line-strong); }
 .photo--wide { aspect-ratio: 16 / 9; }
+.photo--square { aspect-ratio: 1 / 1; }
+.photo--band-tall { height: clamp(440px, 80vh, 820px); }
+
+/* restoration diptych */
+.resto { padding-top: 0; }
+
+.resto-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(1.6rem, 3.5vw, 3rem);
+  align-items: end;
+}
+
+@media (max-width: 880px) { .resto-grid { grid-template-columns: 1fr; } }
+
+.resto-note {
+  margin-top: 1.6rem;
+  font-size: 0.95rem;
+  color: var(--stone);
+  max-width: 34em;
+}
 
 .traders-grid .photo-wide { margin-top: 2.2rem; }
 

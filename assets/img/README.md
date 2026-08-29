@@ -6,11 +6,11 @@ exists, the site shows a clearly marked "Photograph to follow" slot instead.
 
 | File | Where it appears | Status |
 | --- | --- | --- |
-| `band.jpg` | Full-width band between the story and the halls | ✅ the restoration shot (two directors in hi-vis) |
-| `band-produce.jpg` | Full-width band before the Crop section | ✅ traders with a veg basket (from the operational deck) |
-| `band-farm.jpg` | Full-width band after Genuinely local | ✅ cows grazing the South Devon coast (from the deck) |
+| `band.jpg` | Restoration diptych after the story (shown as a true square, uncropped) | ✅ the directors on site |
+| `band-produce.jpg` | Full-width band before the Crop section | ⬜ WANTED: a high-res fresh-produce shot (fruit & veg flatlay or market display), 2400px+ wide, landscape |
+| `band-farm.jpg` | Tall full-width band after Genuinely local | ✅ cows grazing the South Devon coast (from the deck) |
 | `gatherings.jpg` | Gatherings & events row in The Halls | ✅ festoon lights at dusk (from the deck) |
-| `restoration.jpg` | Traders section, under the walk-through list | ✅ hall interior during fit-out (from the deck) |
+| `restoration.jpg` | Restoration diptych, wide companion image | ✅ hall interior during fit-out (from the deck) |
 | `hero.jpg` | Full-screen hero background (dark overlay is applied for legibility) | ✅ roof-truss group shot |
 | `building.jpg` | "The old market, reborn" section (portrait crop, 3:3.6) | ✅ the restored rose window (from the deck) |
 | `market-hall.jpg` | Market Hall card (arched portrait, 4:4.6) | 🔶 placeholder crop, marked on-site; replace with shoot photography |
