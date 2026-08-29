@@ -57,8 +57,8 @@
     <section class="hero" id="home">
       <div class="hero-bg" aria-hidden="true"></div>
       <video class="hero-video" id="heroVideo" muted loop playsinline preload="none" poster="assets/img/hero-poster.jpg" aria-hidden="true">
-        <source src="assets/video/hero.webm" type="video/webm">
-        <source src="assets/video/hero.mp4" type="video/mp4">
+        <source src="assets/video/hero.webm" data-mobile="assets/video/hero-mobile.webm" type="video/webm">
+        <source src="assets/video/hero.mp4" data-mobile="assets/video/hero-mobile.mp4" type="video/mp4">
       </video>
       <div class="hero-vignette" aria-hidden="true"></div>
       <div class="hero-content">
@@ -346,9 +346,9 @@
       </div>
       <figure class="photo team-lead reveal">
         <div class="photo-media">
-          <img src="assets/img/team-group.jpg" alt="Andy Johnson, Jay Jacoby and Mark O&rsquo;Connell on the staircase beneath the restored iron roof" loading="lazy">
+          <img src="assets/img/team-group.jpg" alt="Mark O&rsquo;Connell, Jay Jacoby and Andy Johnson on the staircase beneath the restored iron roof" loading="lazy">
         </div>
-        <figcaption class="container">Andy, Jay and Mark in the hall</figcaption>
+        <figcaption class="container">Mark, Jay and Andy in the hall</figcaption>
       </figure>
       <div class="container">
         <div class="team-grid">
@@ -426,13 +426,13 @@
             </div>
             <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Market%20Street%2C%20Newton%20Abbot%20TQ12%202RB" target="_blank" rel="noopener">Get directions</a>
           </div>
-          <div class="visit-map reveal">
-            <iframe
-              title="Map of Newton Old Market, Market Street, Newton Abbot"
-              src="https://www.google.com/maps?q=Market%20Street%2C%20Newton%20Abbot%2C%20Devon%20TQ12%202RB&z=16&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen></iframe>
+          <div class="visit-map reveal" id="visitMap"
+               data-map-src="https://www.google.com/maps?q=Market%20Street%2C%20Newton%20Abbot%2C%20Devon%20TQ12%202RB&z=16&output=embed">
+            <div class="map-consent">
+              <p class="map-consent-copy">The map comes from Google Maps, which sets its own cookies, so we do not load it until you say so.</p>
+              <button type="button" class="btn btn-outline" id="loadMap">Load the map</button>
+              <p class="map-alt"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Market%20Street%2C%20Newton%20Abbot%20TQ12%202RB" target="_blank" rel="noopener">Or open directions in a new tab</a></p>
+            </div>
           </div>
         </div>
       </div>
@@ -483,12 +483,25 @@
           <a class="footer-crop" href="#crop">
             <img src="assets/logos/crop-tag-white.png" alt="Crop. Seeds grow here." width="110">
           </a>
-          <p>&copy; <span id="year">2026</span> Crop &middot; Newton Old Market, est. 1871 &middot; Market Street, Newton Abbot, Devon TQ12 2RB</p>
+          <p>&copy; <span id="year">2026</span> Crop &middot; Newton Old Market, est. 1871 &middot; Market Street, Newton Abbot, Devon TQ12 2RB<br>
+          <span class="footer-links"><a href="privacy.html">Privacy</a> &middot; <a href="cookies.html">Cookies</a> &middot; <a href="terms.html">Terms</a></span></p>
         </div>
       </div>
     </footer>
 
   </main>
+
+
+  <!-- ======================= COOKIE BANNER ======================= -->
+  <div class="cookie-bar" id="cookieBar" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+    <div class="cookie-inner">
+      <p class="cookie-copy">This site sets no cookies of its own and does not track you. We only ask because the Google map on the Visit page sets its own. <a href="cookies.html">Read the cookie policy</a>.</p>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-solid" id="cookieAccept">Accept</button>
+        <button type="button" class="btn btn-outline" id="cookieDecline">Decline</button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
