@@ -531,6 +531,7 @@ p + p { margin-top: 1rem; }
 .photo--tall { aspect-ratio: 3 / 3.6; }
 .photo--arch { aspect-ratio: 4 / 4.6; border-radius: 999px 999px 0 0; }
 .photo--team { aspect-ratio: 4 / 5; }
+.photo--arch-top { border-radius: 999px 999px 0 0; }
 .photo--band { height: clamp(320px, 58vh, 600px); }
 .photo--map { aspect-ratio: 8 / 6.2; border: 1px solid var(--line-strong); }
 
@@ -970,9 +971,20 @@ p + p { margin-top: 1rem; }
 
 .visit-info .btn-outline { margin-top: 1.6rem; }
 
-.visit-map .photo-media img { transition: none; }
+.visit-map {
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  min-height: 460px;
+  background: var(--sand);
+}
 
-.visit-map .photo:hover .photo-media img { transform: none; }
+.visit-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  border: 0;
+  display: block;
+}
 
 /* ---------- footer ---------- */
 
