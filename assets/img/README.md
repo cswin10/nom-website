@@ -2,18 +2,23 @@
 
 The site is designed so photos slot straight in — add files with these exact
 names and they appear automatically (no code changes needed). Until a file
-exists, the site shows an elegant branded placeholder instead.
+exists, the site shows a clearly marked "Photograph to follow" slot instead.
 
 | File | Where it appears | Status |
 | --- | --- | --- |
+| `band.jpg` | Full-width photography band between the story and the halls (edge to edge, ~16:6) | ⬜ reserved for real photography: the building, ironwork, or producers on their land |
 | `hero.jpg` | Full-screen hero background (dark overlay is applied for legibility) | ✅ roof-truss group shot |
-| `building.jpg` | "The old market, reborn" section (portrait crop, 3:3.6) | ✅ arched-windows shot |
-| `market-hall.jpg` | Market Hall card (16:10 landscape) | ✅ staircase shot (centre crop) |
-| `food-hall.jpg` | Food Hall card (16:10 landscape) | ⬜ still wanted — food hall / counters shot |
+| `building.jpg` | "The old market, reborn" section (portrait crop, 3:3.6) | ✅ brick arch + lamp (no people) |
+| `market-hall.jpg` | Market Hall card (arched portrait, 4:4.6) | ✅ rose window + staircase (no people) |
+| `food-hall.jpg` | Food Hall card (arched portrait, 4:4.6) | ✅ ironwork + ductwork crop (a counters shot would upgrade it) |
 | `team/andy-johnson.jpg` | Team card (portrait, ~4:4.7) | ✅ |
 | `team/jay-jacoby.jpg` | Team card | ✅ |
 | `team/tommy-tannock.jpg` | Team card | ✅ |
 | `team/mark-oconnell.jpg` | Team card | ✅ |
+
+`map.svg` is the stylised static map in the Visit section (schematic, hand-drawn in SVG).
+
+Every image uses the shared photo component (`figure.photo > .photo-media > img` + optional `figcaption`), so new photography drops in by filename with no layout changes.
 
 These were generated (resized + compressed) from the high-res originals in the
 repo root. Replace any of them the same way — same filename, and the site picks
